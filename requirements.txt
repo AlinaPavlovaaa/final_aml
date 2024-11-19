@@ -84,7 +84,6 @@ mamba
 MarkupSafe
 matplotlib
 matplotlib-inline
-menuinst
 mistune
 more-itertools
 mpmath
