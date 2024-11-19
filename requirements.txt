@@ -20,12 +20,6 @@ charset-normalizer
 click
 colorama
 comm
-conda
-conda-build
-conda-libmamba-solver
-conda-package-handling
-conda_index
-conda_package_streaming
 contourpy
 cycler
 debugpy
