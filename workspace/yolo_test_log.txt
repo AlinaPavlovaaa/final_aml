@@ -1,2 +1,0 @@
-Average IoU: 0.7013
-Average IoU: 0.7013
