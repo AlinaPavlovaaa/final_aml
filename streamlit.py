@@ -7,7 +7,22 @@ from PIL import Image
 import torch
 from torchvision.transforms import functional as F
 from torchvision.models.detection import fasterrcnn_resnet50_fpn
+import gdown
+import os
 
+
+@st.cache_resource
+def download_model():
+    file_id = "18M5NP0p4a56iwXqCwunT4m-CemftzGDp"
+    url = f"https://drive.google.com/uc?id={file_id}"
+    output = "model.pt"
+
+    if not os.path.exists(output):
+        gdown.download(url, output, quiet=False)
+
+    return output
+
+faster_rcnn_model_path = download_model()
 
 def yolo_inference(image, model_path="best.pt"):
     model = YOLO(model_path)
@@ -69,8 +84,8 @@ def main():
             
             elif model_option == "Faster R-CNN":
                 st.write("Running Faster R-CNN...")
-                model_path = "best_faster_rcnn.pth"
-                annotated_image, detections = faster_rcnn_inference(image_np, model_path=model_path, device="cpu")
+                model_path = faster_rcnn_model_path
+                annotated_image, detections = faster_rcnn_inference(image_np, model_path=faster_rcnn_model_path, device="cpu")
                 st.image(annotated_image, caption="Faster R-CNN Detection", use_column_width=True)
                 st.write(detections)
 
