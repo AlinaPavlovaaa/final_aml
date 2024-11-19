@@ -38,6 +38,7 @@ fonttools
 fqdn
 frozendict
 fsspec
+gdown
 h11
 h2
 hpack
