@@ -109,7 +109,7 @@ nvidia-cusparse-cu12
 nvidia-nccl-cu12
 nvidia-nvjitlink-cu12
 nvidia-nvtx-cu12
-opencv-python
+opencv-contrib-python-headless
 optree
 overrides
 packaging
