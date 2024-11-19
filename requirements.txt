@@ -77,7 +77,6 @@ jupyterlab_widgets
 kagglehub
 kiwisolver
 libarchive-c
-libmambapy
 lief
 lightning-utilities
 lintrunner
